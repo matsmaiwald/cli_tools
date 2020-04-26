@@ -1,0 +1,18 @@
+#!/bin/bash
+GREEN='\033[0;32m'
+RED='\033[0;31m'
+NC='\033[0m' # No Color
+
+echo -e "${GREEN}-------------------------------------"
+echo "Commits added in the last 2 weeks:"
+echo -e "-------------------------------------${NC}"
+for i in */.git;
+    do ( 
+    echo -e "${RED}--------------------"
+    echo "REPO: ${i}"; 
+    echo -e "--------------------${NC}"
+    cd $i/..;
+    git log --since=2.weeks --decorate=short \
+    --abbrev-commit --oneline --branches --color=always | cat; \
+    ); done
+
