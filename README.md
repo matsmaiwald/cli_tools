@@ -17,18 +17,19 @@ projects
 ```
 An exemplary output of `git-hist` looks like this:
 
+![Example](example_screenshot.png)
 
 
 # Installation
 To use the script, simply clone the repo:
 
-{% highlight bash %}
+```
 git clone git@github.com:matsmaiwald/cli_tools.git
-{% endhighlight %}
+```
 
 and add it to your Path by adding the following line to your `~/.zshrc` or `~/.bashrc`:
 
-{% highlight bash %}
+```
 export PATH=$PATH:<path to cli_tools repo>
-{% endhighlight %}
+```
 
